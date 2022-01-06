@@ -1,0 +1,16 @@
+hr = input("Enter your hour:")
+rate = input("Enter your rate")
+try:
+    ahr = float(hr)
+    arate = float(rate)
+except:
+    print("Please enter a numeric value")
+    quit()
+if ahr > 40:
+    regpay = ahr * arate
+    overpay = (ahr - 40.0) * (0.5 * arate)
+    total = regpay + overpay
+    print("Pay:", total)
+else:
+    total = ahr * arate
+    print("Pay:", total)
